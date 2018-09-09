@@ -12,11 +12,11 @@ URL: **heroku-app-url**
 
 #### Milestone 1: Create users and registration/login/logout
 * [x] Users should be able to register themselves (Fields: Email, name, image_url, bio, password, password confirmation)
-  * [ ] Add validations to the form (email is mandatory and unique, password confirmation should match password)
-* [ ] Users should be able to login
-* [ ] Once logged in, the user should see his name at the top of the page (navbar?), his name should link to his profile.
-* [ ] A logged user should be able to logout
-* [ ] A user should have a profile page (like the facebook wall) with some basic information from the user
+  * [x] Add validations to the form (email is mandatory and unique, password confirmation should match password)
+* [x] Users should be able to login
+* [x] Once logged in, the user should see his name at the top of the page (navbar?), his name should link to his profile.
+* [x] A logged user should be able to logout
+* [x] A user should have a profile page (like the facebook wall) with some basic information from the user
 
 #### Milestone 2: Two users can be friends
 

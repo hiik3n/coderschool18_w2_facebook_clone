@@ -1,6 +1,22 @@
 <ul>
 	<% if user_signed_in? %>
 		<li>
+			<%= "Name " + current_user.name %>
+		</li>
+
+		<li>
+			<%= "Email " + current_user.email %>
+		</li>
+
+		<li>
+			<%= "Image_url: " + current_user.image_url %>
+		</li>
+
+		<li>
+			<%= "Bio: " + current_user.bio %>
+		</li>
+
+		<li>
 			<%= link_to "Sign Out", destroy_user_session_url, method: :delete %>
 		</li>
 	<% else %>
