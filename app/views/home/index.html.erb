@@ -19,6 +19,29 @@
 		<li>
 			<%= link_to "Sign Out", destroy_user_session_url, method: :delete %>
 		</li>
+
+		<h2>FriendShip</h2>
+		<ul>
+
+		  <h3>Friends</h3>
+		  <%  (current_user.friends & current_user.followers).each do |friend| %>
+		    <li>
+		      	<%= friend.name %>
+		    </li>
+		  <% end %>
+		   
+		  <h3>Friend Request</h3>
+		  <%  (current_user.followers - current_user.friends).each do |friend| %>
+		    <li>
+		      	<%= friend.name %>
+		    </li>
+		    <%= link_to "Accept Friend Request", friendships_path(:friend_id => friend), :method => :post %>
+		  <% end %>
+		</ul>
+
+		
+		 <p><%= link_to "Find Other Friends", user_list_path %></p>
+
 	<% else %>
 		<li>
 			<%= link_to "Sign in", new_user_session_url %>

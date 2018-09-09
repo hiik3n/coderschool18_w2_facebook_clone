@@ -1,0 +1,66 @@
+<ul>
+	<% if user_signed_in? %>
+		<li>
+			<%= "Name " + current_user.name %>
+		</li>
+
+		<li>
+			<%= "Email " + current_user.email %>
+		</li>
+
+		<li>
+			<%= "Image_url: " + current_user.image_url %>
+		</li>
+
+		<li>
+			<%= "Bio: " + current_user.bio %>
+		</li>
+
+		<li>
+			<%= link_to "Sign Out", destroy_user_session_url, method: :delete %>
+		</li>
+
+		<h2>Find New Friends</h2>
+
+		<ul>
+		  <%  @friend_unknown.each do |user| %>
+		    <li>
+		      <%= user.name %>
+		    </li>
+		    <%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %>
+		  <% end %>
+		</ul>
+		<ul>
+		  <%  @friend_requested.each do |user| %>
+		    <li>
+		      <%= user.name %>
+		    </li>
+		    <%= link_to "Cancel Request", friendship_path(:id => user.followings.where(user_id: current_user.id).ids), :method => :delete %>
+		  <% end %>
+		</ul>
+		<ul>
+		  <%  @friend_request_from.each do |user| %>
+		    <li>
+		      <%= user.name %>
+		    </li>
+		    <%= link_to "Accept Friend Request", friendships_path(:friend_id => user), :method => :post %>
+		  <% end %>
+		</ul>
+
+		<li>
+		    <%= link_to "Back", root_url %>
+		</li>
+
+		
+
+	<% else %>
+		<li>
+			<%= link_to "Sign in", new_user_session_url %>
+		</li>
+		
+		<li>
+			<%= link_to "Sign up", new_user_registration_url %>
+		</li>
+	<% end %>
+
+</ul>

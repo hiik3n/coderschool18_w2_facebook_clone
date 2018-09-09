@@ -20,9 +20,9 @@ URL: **heroku-app-url**
 
 #### Milestone 2: Two users can be friends
 
-* [ ] Logged users can create friendships with other users
-* [ ] A user can see his friends and his friend requests
-* [ ] You can see friends from an user (and friend requests for now) on his wall
+* [x] Logged users can create friendships with other users
+* [x] A user can see his friends and his friend requests
+* [x] You can see friends from an user (and friend requests for now) on his wall
 
 #### Milestone 3: Posts
 
