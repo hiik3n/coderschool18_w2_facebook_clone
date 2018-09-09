@@ -4,7 +4,7 @@
 
 Submitted by: **Lam Do**
 
-Time spent: **XX** hours spent in total
+Time spent: **12** hours spent in total
 
 URL: **heroku-app-url**
 
